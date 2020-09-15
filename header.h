@@ -27,7 +27,7 @@ struct Vector
 public:
     double x, y, z;
 };
-
+std::vector<PointP> boundary;
 // Chiều dài vecter
 double VectorLength(Vector AB) { return sqrt(AB.x * AB.x + AB.y * AB.y + AB.z * AB.z); }
 
@@ -40,13 +40,27 @@ double Angle2Vector(Vector vector1, Vector vector2)
 {
     return 180 / Pi * acos((vector1.x * vector2.x + vector1.y * vector2.y + vector1.z * vector2.z) / (VectorLength(vector1) * VectorLength(vector2)));
 }
+void checkboundary(std::vector<PointP> listpoint, std::vector<PointP> boundary1)
+{
+    MatPhang abc;
+    abc = MatPhangABC(listpoint[0], listpoint[1], listpoint[2]);
+    int n = listpoint.size();
+    for (int i = 0 ;i < n ; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
 
+        }
+    }
+
+}
 // Tạo 1 Vecter từ 2 điểm
 Vector CreatVecterAB(PointP A, PointP B) { return Vector{ B.x - A.x, B.y - A.y, B.z - A.z }; }
 
 // Chếch 1 điểm thuộc 1 đường thẳng AB
 bool CheckCNamTrenAB(PointP Point1, PointP Point2, PointP Point3, double Invalid)
 {
+    
     double GocGiua2Vecter = Angle2Vector(CreatVecterAB(Point1, Point3), CreatVecterAB(Point2, Point3));
     if (abs(GocGiua2Vecter) <= 0.001 or abs(GocGiua2Vecter - 180) <= 0.001)
     {
@@ -76,7 +90,24 @@ bool NamNgoaiAB_Right(PointP A, PointP B, PointP C, double Invalid)
     if (abs(DistancePointAB(A, C) - DistancePointAB(B, C) - DistancePointAB(B, A)) <= Invalid and CheckCNamTrenAB(A, B, C, Invalid) == true) { return true; }
     return false;
 }
+//check 1 điểm có thuộc đường thằng AB hay không
+bool checkpoint_in_AB(PointP A, PointP B, PointP C)
+{
+    Vector AB; Vector AC;
+    AB = CreatVecterAB(A,B);
+    AC = CreatVecterAB(A,C);
+    double q = Angle2Vector(AB, AC);
 
+    if ( (q < 0.0000001) && (q >179.999) && (q < 180.1) )
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
 //Check 2 điểm trùng nhau
 bool ComparePointAB(PointP A, PointP B, double Invalid) { if (abs(A.x - B.x) <= Invalid and abs(A.y - B.y) <= Invalid and abs(A.z - B.z) <= Invalid) { return true; } else { return false; } }
 
