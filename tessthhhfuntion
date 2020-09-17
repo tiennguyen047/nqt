@@ -1,0 +1,52 @@
+#include <iostream>
+#include<math.h>
+#include<stdio.h>
+#include<conio.h>
+#include "Header.h"
+using namespace std;
+int main()
+{
+	std::vector<PointP> list_point;
+	list_point.push_back(PointP{ 4600,38,0,true,0});
+	list_point.push_back(PointP{ 4600,38,2300,true,1 });
+	list_point.push_back(PointP{ 4400,38,2300,true,2 });
+	list_point.push_back(PointP{ 4400,38,2500,true,3 });
+	list_point.push_back(PointP{ 2900,38,2500,true,4 });
+	list_point.push_back(PointP{ 2900,38,0,true,5 });
+	list_point.push_back(PointP{ 3200,38,0,true,6 });
+	list_point.push_back(PointP{ 3200,38,2134,true,7 });
+	list_point.push_back(PointP{ 4115,38,2134,true,8 });
+	list_point.push_back(PointP{ 4115,38,0,true,9 });
+	list_point.push_back(PointP{ 0,38,1780,true,10 });
+	list_point.push_back(PointP{ 0,38,0,true,11});
+	list_point.push_back(PointP{ 400,38,0,true,12 });
+	list_point.push_back(PointP{ 400,38,883,true,13 });
+	list_point.push_back(PointP{ 1310,38,883,true,14 });
+	list_point.push_back(PointP{ 1310,38,0,true,15 });
+	list_point.push_back(PointP{ 1693,38,0,true,16 });
+	list_point.push_back(PointP{ 1908,38,0,true,17 });
+	list_point.push_back(PointP{ 2038,38,0,true,18 });
+	list_point.push_back(PointP{ 2038,38,2500,true,19 });
+	list_point.push_back(PointP{ 1908,38,2500,true,20 });
+	list_point.push_back(PointP{ 1693,38,2500,true,21 });
+	list_point.push_back(PointP{ 720,38,2500,true,22 });
+	std::vector<PointP> boundary;
+	std::vector<PointP> boundary1;
+	boundary = checkboundary(list_point, boundary1);
+	for (PointP p : boundary)
+	{
+		std::cout << p.stt << " point x : " << p.x << " | y : " << p.y << " | z : " << p.z << std::endl;
+	}
+	MatPhang a = MatPhangABC(list_point[0], list_point[1], list_point[2]);
+	std::cout << a.a <<"," <<a.b << "," << a.c <<"," <<a.d << std::endl;
+	if (check_point_in_plan(a, list_point[8]))
+	{
+		std::cout << "okie qq" << std::endl;
+	}
+	else
+	{
+		std::cout << "okie qq1" << std::endl;
+	}
+	system("pause");
+	return 0;
+}
