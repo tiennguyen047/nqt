@@ -1,0 +1,249 @@
+﻿<Element>
+    <StringTable>Column Reinforcement</StringTable>
+    <!-- Main Tab -->
+    <Item>
+        <TextId>1000</TextId>
+        <Text>Main</Text>
+    </Item>
+
+    <!-- Expander General -->
+    <Item>
+        <TextId>1001</TextId>
+        <Text>Allgemeines</Text>
+    </Item>
+
+    <!-- Column Name -->
+    <Item>
+        <TextId>1002</TextId>
+        <Text>C1</Text>
+    </Item>
+
+    <!-- Concrete Cover -->
+    <Item>
+        <TextId>1003</TextId>
+        <Text>Betondeckung [mm]</Text>
+    </Item>
+
+    <!-- Concrete Grade -->
+    <Item>
+        <TextId>1004</TextId>
+        <Text>Betonqualität</Text>
+    </Item>
+
+    <!-- Slab Above Thickness -->
+    <Item>
+        <TextId>1005</TextId>
+        <Text>Platte über Dicke [mm]</Text>
+    </Item>
+
+    <!-- Cut Section -->
+    <Item>
+        <TextId>1006</TextId>
+        <Text>Abschnitt abschneiden</Text>
+    </Item>
+
+    <!-- Corner Rebar Expander -->
+    <Item>
+        <TextId>1011</TextId>
+        <Text>Eckbewehrung</Text>
+    </Item>
+
+    <!-- Corner Rebar Diameter -->
+    <Item>
+        <TextId>1012</TextId>
+        <Text>Durchmesser</Text>
+    </Item>
+
+    <!-- Crank Checkbox -->
+    <Item>
+        <TextId>1013</TextId>
+        <Text>Kurbel</Text>
+    </Item>
+
+    <!-- Crank Distance -->
+    <Item>
+        <TextId>1014</TextId>
+        <Text>Kurbelabstand [mm]</Text>
+    </Item>
+
+    <!-- Starter Length -->
+    <Item>
+        <TextId>1015</TextId>
+        <Text>Starterlänge [mm]</Text>
+    </Item>
+
+    <!-- Additional X Expander -->
+    <Item>
+        <TextId>1021</TextId>
+        <Text>Additional X</Text>
+    </Item>
+
+    <!-- Number of rebar -->
+    <Item>
+        <TextId>1022</TextId>
+        <Text>Number of rebar</Text>
+    </Item>
+
+    <!-- Diameter -->
+    <Item>
+        <TextId>1023</TextId>
+        <Text>Diameter</Text>
+    </Item>
+
+    <!-- Crank Checkbox -->
+    <Item>
+        <TextId>1024</TextId>
+        <Text>Crank</Text>
+    </Item>
+
+    <!-- Crank Distance -->
+    <Item>
+        <TextId>1025</TextId>
+        <Text>Crank Distance [mm]</Text>
+    </Item>
+
+    <!-- Starter Length -->
+    <Item>
+        <TextId>1026</TextId>
+        <Text>Starter Length [mm]</Text>
+    </Item>
+
+    <!-- Additional Y Expander -->
+    <Item>
+        <TextId>1031</TextId>
+        <Text>Additional Y</Text>
+    </Item>
+
+    <!-- Number of rebar -->
+    <Item>
+        <TextId>1032</TextId>
+        <Text>Number of rebar</Text>
+    </Item>
+
+    <!-- Diameter -->
+    <Item>
+        <TextId>1033</TextId>
+        <Text>Diameter</Text>
+    </Item>
+
+    <!-- Crank Checkbox -->
+    <Item>
+        <TextId>1034</TextId>
+        <Text>Crank</Text>
+    </Item>
+
+    <!-- Crank Distance -->
+    <Item>
+        <TextId>1035</TextId>
+        <Text>Crank Distance [mm]</Text>
+    </Item>
+
+    <!-- Starter Length -->
+    <Item>
+        <TextId>1036</TextId>
+        <Text>Starter Length [mm]</Text>
+    </Item>
+
+    <!-- Stirrup Expander -->
+    <Item>
+        <TextId>1041</TextId>
+        <Text>Stirrups</Text>
+    </Item>
+
+    <!-- Diameter -->
+    <Item>
+        <TextId>1042</TextId>
+        <Text>Diameter</Text>
+    </Item>
+
+    <!-- Spacing -->
+    <Item>
+        <TextId>1043</TextId>
+        <Text>Spacing [mm]</Text>
+    </Item>
+
+    <!-- Hook Length -->
+    <Item>
+        <TextId>1044</TextId>
+        <Text>Hook Length [mm]</Text>
+    </Item>
+
+    <!-- Hook Angle -->
+    <Item>
+        <TextId>1045</TextId>
+        <Text>Hook Angle</Text>
+    </Item>
+
+    <!-- Additional Top -->
+    <Item>
+        <TextId>1046</TextId>
+        <Text>Additional Top</Text>
+    </Item>
+
+    <!-- Length -->
+    <Item>
+        <TextId>1047</TextId>
+        <Text>Length [mm]</Text>
+    </Item>
+
+    <!-- Spacing -->
+    <Item>
+        <TextId>1048</TextId>
+        <Text>Spacing [mm]</Text>
+    </Item>
+
+    <!-- Additional Bot -->
+    <Item>
+        <TextId>1049</TextId>
+        <Text>Additional Bot</Text>
+    </Item>
+
+    <!-- Length -->
+    <Item>
+        <TextId>1050</TextId>
+        <Text>Length [mm]</Text>
+    </Item>
+
+    <!-- Spacing -->
+    <Item>
+        <TextId>1051</TextId>
+        <Text>Spacing [mm]</Text>
+    </Item>
+
+    <!-- Setting -->
+    <Item>
+        <TextId>2000</TextId>
+        <Text>Setting</Text>
+    </Item>
+
+    <!-- Option Expander -->
+    <Item>
+        <TextId>2001</TextId>
+        <Text>Option</Text>
+    </Item>
+
+    <!-- Save as favorite -->
+    <Item>
+        <TextId>2002</TextId>
+        <Text>Save as favorite</Text>
+    </Item>
+
+    <!-- Save -->
+    <Item>
+        <TextId>2003</TextId>
+        <Text>Save</Text>
+    </Item>
+
+    <!-- Load favorite -->
+    <Item>
+        <TextId>2004</TextId>
+        <Text>Load favorite</Text>
+    </Item>
+
+    <!-- Load -->
+    <Item>
+        <TextId>2005</TextId>
+        <Text>Load</Text>
+    </Item>
+
+</Element>
