@@ -1,0 +1,277 @@
+"""
+Hello world template
+"""
+import os
+import sys
+import json
+import math
+import NemAll_Python_Geometry as AllplanGeo
+import NemAll_Python_BaseElements as AllplanBaseElements
+import NemAll_Python_BasisElements as AllplanBasisElements
+import NemAll_Python_IFW_Input as AllplanIFW
+import NemAll_Python_Geometry as AllplanGeo
+import NemAll_Python_IFW_ElementAdapter as AllplanElementAdapter
+from BuildingElementPaletteService import BuildingElementPaletteService
+from BuildingElementService import BuildingElementService
+import NemAll_Python_Reinforcement as AllplanReinf
+import NemAll_Python_AllplanSettings as AllplanSettings
+import NemAll_Python_Utility as AllplanUtil
+
+
+
+# Print some information
+print('Load HelloWorld.py1')
+# comt với python thì sử dụng #, hàm này được in ra ở vị trí 
+
+# Method for checking the supported versions
+def check_allplan_version(build_ele, version):
+    """
+    Check the current Allplan version
+
+    Args:
+        build_ele: the building element.
+        version:   the current Allplan version
+
+    Returns:
+        True/False if version is supported by this script
+    """
+
+    # Delete unused arguments
+    del build_ele
+    del version
+    #print(build_ele)
+    #print(version)
+
+    # Support all versions
+    return True
+
+
+# Method for element creation
+def create_element(build_ele, doc):
+    """
+    Creation of element
+
+    Args:
+        build_ele: the building element.
+        doc:       input document
+
+    Returns:
+            tuple  with created elements, handles and (otional) reinforcement.
+    """
+
+    # Delete unused arguments
+    del doc
+    
+    # Access the parameter property from *.pyp file
+    # length = build_ele.Length.value
+    # Create a 2d line
+    #line = AllplanGeo.Line2D(0, 0, length,0)
+    # Define common style properties
+    # polygon = AllplanGeo.Polygon2D()
+    # polygon += AllplanGeo.Point2D(0,0)
+    # polygon += AllplanGeo.Point2D(0,300)
+    # polygon += AllplanGeo.Point2D(200,300)
+    # polygon += AllplanGeo.Point2D(200,0)
+    # polygon += AllplanGeo.Point2D(0,0)
+    #polygon += AllplanGeo.Point2D(4000,0)
+    # polygon = AllplanGeo.Polygon2D()
+    # polygon += AllplanGeo.Point2D(4000,0)
+    # polygon += AllplanGeo.Point2D(4500,300)
+    # polygon += AllplanGeo.Point2D(4300,500)
+    # polygon += AllplanGeo.Point2D(5000,1000)
+    # polygon += AllplanGeo.Point2D(4200,900)
+    # polygon += AllplanGeo.Point2D(4000,0)
+    # polyline = AllplanGeo.Polyline2D()
+    # polyline += AllplanGeo.Point2D(0,0)
+    # polyline += AllplanGeo.Point2D(0,300)
+    # polyline += AllplanGeo.Point2D(200,300)
+    # polyline += AllplanGeo.Point2D(200,0)
+    # polyline += AllplanGeo.Point2D(0,0)
+    # arc = AllplanGeo.Arc2D(AllplanGeo.Point2D(0, 0), 500, 500, math.pi / 2, math.pi/2 , 2*math.pi, True)
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # com_prop.Color = 5
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # com_prop.Color = 5
+    # spline = AllplanGeo.Spline2D()
+    # spline += AllplanGeo.Point2D(0, 0)
+    # spline += AllplanGeo.Point2D(500, 500)
+    # spline += AllplanGeo.Point2D(1000, 1000)
+    # spline.SetStartVector(AllplanGeo.Vector2D(1, 0))
+    # spline.SetEndVector(AllplanGeo.Vector2D(1, 0))
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+
+    # com_prop.GetGlobalProperties()
+    # com_prop.Color = 5
+    
+    
+    # point1 = AllplanGeo.Point3D(500,500,500)
+    # point2 = AllplanGeo.Point3D(1000,1000,1000)
+
+    # polyhed = AllplanGeo.Polyhedron3D.CreateCuboid(point1, point2)
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # common_props = AllplanBaseElements.CommonProperties()
+    # common_props.GetGlobalProperties()
+    # Create a 2D ModelElement instance and add it to elements list
+    
+    
+    
+    
+    # cone = AllplanGeo.Cone3D(
+    #         AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(0, 0, 0),
+    #                                    AllplanGeo.Vector3D(1, 0, 0),
+    #                                    AllplanGeo.Vector3D(0, 0, 1)),
+    #         1000, 200,
+    #         AllplanGeo.Point3D(0, 0, 2000))
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # model_elem_list = [AllplanBasisElements.ModelElement3D(com_prop, cone)]
+    
+    
+    # cylinder3d
+    # cylinder = AllplanGeo.Cylinder3D(
+    #         AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(0, 0, 0),
+    #                                    AllplanGeo.Vector3D(1, 0, 0),
+    #                                    AllplanGeo.Vector3D(0, 0, 1)),
+    #         1000, 1000,
+    #         AllplanGeo.Point3D(0, 0, 10000))
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # model_elem_list = [AllplanBasisElements.ModelElement3D(com_prop, cylinder)]
+    
+    
+    # elip3d
+    
+    # ellipsoid = AllplanGeo.Ellipsoid3D(
+    #         AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(0, 0, 0),
+    #                                    AllplanGeo.Vector3D(1, 0, 0),
+    #                                    AllplanGeo.Vector3D(0, 0, 1)),
+    #         1000, 1000, 1000)
+
+    # com_prop = AllplanBaseElements.CommonProperties()
+    # com_prop.GetGlobalProperties()
+    # model_elem_list = [AllplanBasisElements.ModelElement3D(com_prop, ellipsoid)]
+    # # Define the handles list
+    # handle_list = []
+    # # Return a tuple with elements list and handles list
+    # print("ok. it's done")
+    # return (model_elem_list, handle_list)
+    return ([], None, None)
+
+def create_interactor(coord_input, pyp_path, str_table_service):
+    return getatribuild(coord_input, pyp_path, str_table_service)
+
+class getatribuild():
+    def __init__(self, coord_input, pyp_path, str_table_service):
+        #input parameters
+        self.coord_input        = coord_input #okie
+        self.doc                = self.coord_input.GetInputViewDocument()
+        self.pyp_path           = pyp_path #okie
+        self.str_table_service  = str_table_service
+        self.model_ele_list     = None
+        self.build_ele_service  = BuildingElementService() #okie
+        self.palette_service    = None
+        self.preview            = False
+        #default parameters
+        self.section_point      = False
+        self.sel_column         = None
+        self.sel_point          = None
+        self.second_esc         = False
+        self.current_pos        = AllplanReinf.ReinforcementUtil.GetNextBarPositionNumber(self.doc)
+        #filter for columns
+        type_query = AllplanIFW.QueryTypeID(AllplanElementAdapter.Cylinder3D_TypeUUID )
+        sel_query = AllplanIFW.SelectionQuery(type_query)
+        self.element_filter = AllplanIFW.ElementSelectFilterSetting(sel_query, True)
+        self.ShowPalatte("ColumnReinforcement.pal")
+        try:
+            self.LoadLastSetting()
+        except:
+            pass
+    
+    def getdata(self):
+        data = {}
+        return data   
+    
+    def on_mouse_leave(self):
+        pass
+    
+    def on_preview_draw(self):
+        pass
+    
+    def process_mouse_msg(self, mouse_msg, pnt, msg_info): #hàm chọn chuột, xem con chuột có được chọn hay không
+         # Section Point
+        self.coord_input.SelectElement(mouse_msg, pnt, msg_info, True, True, True, self.element_filter)
+        if self.coord_input.IsMouseMove(mouse_msg):
+            return True
+        geo_ele = self.coord_input.GetSelectedElement()
+        geo_listpoint = geo_ele.GetGeometry().GetVertices()[1]
+        x = geo_listpoint[1].Values()[0]
+        y = geo_listpoint[1].Values()[1]
+        z = geo_listpoint[1].Values()[2]
+        print(x)
+        print(y)
+        print(z)
+        self.create_element(x,y,z)
+        return True
+    
+    def ShowPalatte(self, palette_name):
+        """ show the palatte """
+        result, self.build_ele_script, self.build_ele_list, self.control_props_list,    \
+            self.build_ele_composite, part_name, self.file_name = \
+            self.build_ele_service.read_data_from_pyp(self.pyp_path + "\\" + palette_name,
+                                                      self.str_table_service.str_table, False, 
+                                                      self.str_table_service.material_str_table)
+
+        if not result:
+            return True
+
+        self.palette_service = BuildingElementPaletteService(self.build_ele_list, self.build_ele_composite,
+                                                             self.build_ele_script,
+                                                             self.control_props_list, self.file_name)
+
+        self.palette_service.show_palette(part_name)
+        self.build_ele = self.build_ele_list[0]
+        self.coord_input.InitFirstPointInput(AllplanIFW.InputStringConvert("Select columns to create reinforcement"))   
+        
+    def on_cancel_function(self):
+        """
+        Check for input function cancel in case of ESC
+
+        Returns:
+            True/False for success.
+        """
+        return True
+
+    
+    
+    def create_element(self,x,y,z):
+        """
+    Creation of element
+
+    Args:
+        build_ele: the building element.
+        doc:       input document
+
+    Returns:
+            tuple  with created elements, handles and (otional) reinforcement.
+    """
+
+    # Delete unused arguments
+        cylinder = AllplanGeo.Cylinder3D(
+            AllplanGeo.AxisPlacement3D(AllplanGeo.Point3D(x-1000, y, z),
+                                       AllplanGeo.Vector3D(1, 0, 0),
+                                       AllplanGeo.Vector3D(0, 0, 1)),
+            1000, 1000,
+            AllplanGeo.Point3D(0, 0, 10000))
+
+        com_prop = AllplanBaseElements.CommonProperties()
+        com_prop.GetGlobalProperties()
+        model_elem_list = [AllplanBasisElements.ModelElement3D(com_prop, cylinder)]
+        AllplanBaseElements.CreateElements(self.doc, AllplanGeo.Matrix3D(), model_elem_list, [], None)
