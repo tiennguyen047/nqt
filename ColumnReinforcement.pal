@@ -1,394 +1,138 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Element>
     <Script>
-        <Title>Column</Title>
+        <Title>testdemo</Title>
     </Script>
-    <Page>              
-            <Name>Main</Name>
-            <Text>Main</Text>
+    <Page>
+        <Name>Page1</Name>
+        <Text>Reinforcement</Text>
+
+        <Parameter>
+            <Name>Expander1</Name>
             <TextId>1000</TextId>
-            <Parameter>
-                <Name>Expander_General</Name>
-                <TextId>1001</TextId>
-                <Text>General</Text>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Column_Name</Name>
-                    <Text>Column Name</Text>
-                    <TextId>1002</TextId>
-                    <Value>C1</Value>
-                    <ValueType>String</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Concr_Cover</Name>
-                    <Text>Concrete Cover [mm]</Text>
-                    <TextId>1003</TextId>
-                    <Value>30</Value>
-                    <ValueType>ReinfConcreteCover</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Concr_Grade</Name>
-                    <Text>Concrete Grade</Text>
-                    <TextId>1004</TextId>
-                    <Value>6</Value>
-                    <ValueType>ReinfConcreteGrade</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Slab_Above</Name>
-                    <Text>Slab Above Thickness [mm]</Text>
-                    <TextId>1005</TextId>
-                    <Value>300</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Create_Section</Name>
-                    <Text>Cut Section</Text>
-                    <TextId>1006</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Create_Cross_Section</Name>
-                    <Text>Cut Cross Section</Text>
-                    <TextId>1007</TextId>
-                    <Value>0</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
+            <Text>Geometry</Text>
+            <ValueType>Expander</ValueType>
             
-            </Parameter>
-                         
             <Parameter>
-                <Name>Expander_Main_Rebar</Name>
-                <Text>Main Rebar</Text>
-                <TextId>1011</TextId>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-                <Parameter>
-                    <Name>Main_Diameter</Name>
-                    <Text>Corner Diameter</Text>
-                    <TextId>1012</TextId>
-                    <Value>16</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Main_Crank</Name>
-                    <Text>Crank</Text>
-                    <TextId>1013</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Main_Crank_Distance</Name>
-                    <Text>Crank Distance [mm]</Text>
-                    <TextId>1014</TextId>
-                    <Value>50</Value>
-                    <Visible>Main_Crank == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Main_Starter</Name>
-                    <Text>Starter Length [mm]</Text>
-                    <TextId>1015</TextId>
-                    <Value>1000</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
+                <Name>Radius</Name>
+                <TextId>1001</TextId>
+                <Text>Radius</Text>
+                <Value>300.0</Value>
+                <ValueType>Length</ValueType>
+                <MinValue>100</MinValue>
             </Parameter>
-
             <Parameter>
-                <Name>Expander_AdditionalX</Name>
-                <Text>Additional X</Text>
-                <TextId>1021</TextId>
+                <Name>PlacementLength</Name>
+                <TextId>1002</TextId>
+                <Text>Placement length</Text>
+                <Value>1000.0</Value>
+                <ValueType>Length</ValueType>
+                <MinValue>2 * ConcreteCover + 2 * Diameter</MinValue>
+            </Parameter>
+        </Parameter>
+        
+        <Parameter>
+            <Name>Expander2</Name>
+            <Text>Reinforcement</Text>
+            <ValueType>Expander</ValueType>
+            
+            <Parameter>
+                <Name>HorizontalPlacement</Name>
+                <Text>Horizontal placement</Text>
                 <Value>True</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Add_X_Number</Name>
-                    <Text>Number of rebar</Text>
-                    <TextId>1022</TextId>
-                    <ValueList>2|3|4|5</ValueList>
-                    <Value>2</Value>
-                    <ValueType>IntegerComboBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_X_Diameter</Name>
-                    <Text>Diameter</Text>
-                    <TextId>1023</TextId>
-                    <Value>12</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddX_Crank</Name>
-                    <Text>Crank</Text>
-                    <TextId>1024</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddX_Crank_Distance</Name>
-                    <Text>Crank Distance [mm]</Text>
-                    <TextId>1025</TextId>
-                    <Value>30</Value>
-                    <Visible>AddX_Crank == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddX_Starter</Name>
-                    <Text>Starter Length [mm]</Text>
-                    <TextId>1026</TextId>
-                    <Value>600</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
+                <ValueType>Checkbox</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteGrade</Name>
+                <Text>Concrete grade</Text>
+                <Value>4</Value>
+                <ValueType>ReinfConcreteGrade</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>SteelGrade</Name>
+                <Text>Steel grade</Text>
+                <Value>4</Value>
+                <ValueType>ReinfSteelGrade</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Diameter</Name>
+                <Text>Bar diameter</Text>
+                <Value>10.0</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCover</Name>
+                <Text>Concrete cover</Text>
+                <Value>25.0</Value>
+                <ValueType>ReinfConcreteCover</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Distance</Name>
+                <Text>Bar spacing</Text>
+                <Value>200.0</Value>
+                <ValueType>Length</ValueType>
+                <MinValue>2 * Diameter</MinValue>
+            </Parameter>
+            <Parameter>
+                <Name>BendingRoller</Name>
+                <Text>Bending roller</Text>
+                <Value>4.0</Value>
+                <ValueType>ReinfBendingRoller</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>StirrupType</Name>
+                <Text>Type</Text>
+                <Value>FullCircle</Value>
+                <ValueType>String</ValueType>
+                <Enable>False</Enable>
             </Parameter>
 
+        </Parameter>
+        
+        
+        <Parameter>
+            <Name>Expander3</Name>
+            <Text>Format</Text>
+            <ValueType>Expander</ValueType>
+
             <Parameter>
-                <Name>Expander_AdditionalY</Name>
-                <Text>Additional Y</Text>
-                <TextId>1031</TextId>
+                <Name>Surface</Name>
+                <Text>Surface</Text>
+                <Value>SMT\\concrete_exposed_concrete_holes</Value>
+                <DisableButtonIsShown>False</DisableButtonIsShown>
+                <ValueType>MaterialButton</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Layer</Name>
+                <Text>Layer</Text>
+                <Value>0</Value>
+                <ValueType>Layer</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Pen</Name>
+                <Text>Pen</Text>
+                <Value>1</Value>
+                <ValueType>Pen</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Stroke</Name>
+                <Text>Stroke</Text>
+                <Value>1</Value>
+                <ValueType>Stroke</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Color</Name>
+                <Text>Color</Text>
+                <Value>1</Value>
+                <ValueType>Color</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>UseConstructionLineMode</Name>
+                <Text>Use construction line mode</Text>
                 <Value>True</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Add_Y_Number</Name>
-                    <Text>Number of rebar</Text>
-                    <TextId>1032</TextId>
-                    <ValueList>2|3|4|5</ValueList>
-                    <Value>2</Value>
-                    <ValueType>IntegerComboBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Y_Diameter</Name>
-                    <Text>Diameter</Text>
-                    <TextId>1033</TextId>
-                    <Value>12</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddY_Crank</Name>
-                    <Text>Crank</Text>
-                    <TextId>1034</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddY_Crank_Distance</Name>
-                    <Text>Crank Distance [mm]</Text>
-                    <TextId>1035</TextId>
-                    <Value>30</Value>
-                    <Visible>AddY_Crank == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>AddY_Starter</Name>
-                    <Text>Starter Length [mm]</Text>
-                    <TextId>1036</TextId>
-                    <Value>600</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-            </Parameter>  
-
-            <Parameter>
-                <Name>Expander_Stirrup_Rebar</Name>
-                <Text>Stirrups</Text>
-                <TextId>1041</TextId>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Main_Stirrup_Diameter</Name>
-                    <Text>Diameter</Text>
-                    <TextId>1042</TextId>
-                    <Value>10</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Main_Stirrup_Spacing</Name>
-                    <Text>Spacing [mm]</Text>
-                    <TextId>1043</TextId>
-                    <Value>125</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Hook_Length</Name>
-                    <Text>Hook Length [mm]</Text>
-                    <TextId>1044</TextId>
-                    <Value>100</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Hook_Angle</Name>
-                    <Text>Hook Angle</Text>
-                    <TextId>1045</TextId>
-                    <ValueList>90|135</ValueList>
-                    <Value>135</Value>
-                    <ValueType>IntegerComboBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Top</Name>
-                    <Text>Additional Top</Text>
-                    <TextId>1046</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Top_Length</Name>
-                    <Text>Length [mm]</Text>
-                    <TextId>1047</TextId>
-                    <Value>800</Value>
-                    <Visible>Add_Stirrup_Top == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Top_Spacing</Name>
-                    <Text>Spacing [mm]</Text>
-                    <TextId>1048</TextId>
-                    <Value>75</Value>
-                    <Visible>Add_Stirrup_Top == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Bot</Name>
-                    <Text>Additional Bot</Text>
-                    <TextId>1049</TextId>
-                    <Value>1</Value>
-                    <ValueType>CheckBox</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Bot_Length</Name>
-                    <Text>Length [mm]</Text>
-                    <TextId>1050</TextId>
-                    <Value>800</Value>
-                    <Visible>Add_Stirrup_Bot == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Add_Stirrup_Bot_Spacing</Name>
-                    <Text>Spacing [mm]</Text>
-                    <TextId>1051</TextId>
-                    <Value>75</Value>
-                    <Visible>Add_Stirrup_Bot == True</Visible>
-                    <ValueType>Length</ValueType>
-                </Parameter>
+                <ValueType>CheckBox</ValueType>
             </Parameter>
-    </Page>
-
-    <Page>         
-            <Name>Setting</Name>
-            <Text>Setting</Text>
-            <TextId>200</TextId>
-
-            <Parameter>
-                <Name>Expander_Option</Name>
-                <Text>Option</Text>
-                <TextId>2001</TextId>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-
-                	<Parameter>
-                	<Name>Row2</Name>
-                    <Text>Save as favorite</Text>
-                    <TextId>2002</TextId>
-                    <ValueType>Row</ValueType>
-                        <Parameter>
-                            <Name>Save</Name>
-                            <Text>Save</Text>
-                            <TextId>2003</TextId>
-                            <EventId>3001</EventId>
-                            <ValueType>Button</ValueType>
-                        </Parameter>
-                    </Parameter>
-
-                    <Parameter>
-                	<Name>Row2</Name>
-                    <Text>Load favorite</Text>
-                    <TextId>2004</TextId>
-                    <ValueType>Row</ValueType>
-                        <Parameter>
-                            <Name>Load</Name>
-                            <Text>Load</Text>
-                            <TextId>2005</TextId>
-                            <EventId>3002</EventId>
-                            <ValueType>Button</ValueType>
-                        </Parameter>
-                    </Parameter>
-            </Parameter>
-
-            <Parameter>
-                <Name>Expander_Section_Setting</Name>
-                <Text>Section Setting</Text>
-                <TextId>2010</TextId>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Scale</Name>
-                    <Text>Scale 1:</Text>
-                    <TextId>2011</TextId>
-                    <ValueList>25|50</ValueList>
-                    <Value>50</Value>
-                    <ValueType>IntegerComboBox</ValueType>
-                </Parameter>
-            </Parameter>
-
-            <Parameter>
-                <Name>Expander_Rebar_Checking</Name>
-                <Text>Reinforcement Checking</Text>
-                <TextId>2020</TextId>
-                <Value>False</Value>
-                <ValueType>Expander</ValueType>
-
-                <Parameter>
-                    <Name>Min_Main_Diameter</Name>
-                    <Text>Minimum corner diameter</Text>
-                    <TextId>2021</TextId>
-                    <Value>12</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Min_Stirrup_Diameter</Name>
-                    <Text>Minimum stirrup diameter</Text>
-                    <TextId>2022</TextId>
-                    <Value>12</Value>
-                    <ValueType>ReinfBarDiameter</ValueType>
-                </Parameter>
-
-                <Parameter>
-                    <Name>Max_Stirrup_Spacing</Name>
-                    <Text>Maximum stirrup spacing [mm]</Text>
-                    <TextId>2023</TextId>
-                    <Value>200</Value>
-                    <ValueType>Length</ValueType>
-                </Parameter>
-            </Parameter>
+        </Parameter>            
     </Page>
   
 </Element>
